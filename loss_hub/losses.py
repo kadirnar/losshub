@@ -6,7 +6,9 @@ def Mse(y_true, y_pred):
         y_true: ground truth values [numpy array]
         y_pred: predicted values [numpy array]
     Returns:
-
+        y_true : [0.1, 0.2, 0.3, 0.4, 0.5]
+        y_pred : [0.1, 0.3, 0.3, 0.4, 0.2]
+        mse : 1.25
     """
     sums = 0
     for i in range(0,len(y_true)):
