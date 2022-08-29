@@ -12,9 +12,8 @@
 
 ## Loss Functions for Image Classification
 
-Rmse: $y = \frac{1}{2} \sum_i (y_i - y')^2$
-
-Mse: $y = \frac{1}{2} \sum_i (y_i - y')^2$
+Rmse: $$\sqrt{(1/n) \sum_{i=1}^n (y_i - y')^2}$$
+Mse: $$\frac{1}{n} \sum_{i=1}^n (y_i - y')^2$$
 
 ## Installation
 ```bash
