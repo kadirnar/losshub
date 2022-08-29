@@ -1,14 +1,14 @@
 <p align="center">
-<img src="doc/logo.png" width="350">
+<img src="doc/logo.png" width="450">
 </p>
-
+<p align="center">
+    LossHub: Loss Functions Library for Image Classification and Detection
+</p>
 <div align="center">
     <a href="https://badge.fury.io/for/py/losshub"><img src="https://badge.fury.io/py/losshub.svg" alt="pypi version"></a>
 </div>
 
-<p align="center">
-    Classification Loss Function Library.
-</p>
+
 
 ## Loss Functions for Image Classification
 
