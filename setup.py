@@ -11,11 +11,6 @@ def get_long_description():
         return f.read()
 
 
-def get_requirements():
-    with open("requirements.txt") as f:
-        return f.read().splitlines()
-
-
 def get_version():
     current_dir = os.path.abspath(os.path.dirname(__file__))
     version_file = os.path.join(current_dir, "losshub", "__init__.py")
@@ -39,7 +34,6 @@ setuptools.setup(
     url="https://github.com/kadirnar/losshub",
     packages=setuptools.find_packages(exclude=["tests"]),
     python_requires=">=3.7",
-    install_requires=get_requirements(),
     extras_require=extras,
     include_package_data=True,
     classifiers=[
