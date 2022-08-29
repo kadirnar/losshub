@@ -12,7 +12,7 @@ def get_long_description():
 
 
 def get_requirements():
-    with open("requirements.txt", encoding="utf8") as f:
+    with open("requirements.txt") as f:
         return f.read().splitlines()
 
 
@@ -23,30 +23,39 @@ def get_version():
         return re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]', f.read(), re.M).group(1)
 
 
+_DEV_REQUIREMENTS = ["black==21.7b0", "flake8==3.9.2", "isort==5.9.2"]
+
+extras = {"tests": _DEV_REQUIREMENTS, "dev": _DEV_REQUIREMENTS}
+
+
 setuptools.setup(
-    name="sahi",
+    name="losshub",
     version=get_version(),
-    author="OBSS",
+    author="kadirnar",
     license="MIT",
     description="Classification Loss Function Library",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/kadirnar/losshub",
-    packages=setuptools.find_packages(exclude=["demo", "docs", "resources", "tests", "scripts"]),
-    python_requires=">=3.6",
+    packages=setuptools.find_packages(exclude=["tests"]),
+    python_requires=">=3.7",
     install_requires=get_requirements(),
+    extras_require=extras,
+    include_package_data=True,
     classifiers=[
-        "License :: OSI Approved :: MIT License",
+        "Development Status :: 5 - Production/Stable",
         "Operating System :: OS Independent",
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Education",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
+    keywords="machine-learning, deep-learning, ml, pytorch, vision, loss, image-classification, video-classification",
 )
