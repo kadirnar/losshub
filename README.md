@@ -1,12 +1,14 @@
 <p align="center">
 <img src="doc/logo.png" width="450">
 </p>
-<p align="center">
-    LossHub: Loss Functions Library for Image Classification and Detection
-</p>
+<p align="center"> LossHub: Loss Functions Library for Image Classification and Detection</p>
 <div align="center">
     <a href="https://badge.fury.io/for/py/losshub"><img src="https://badge.fury.io/py/losshub.svg" alt="pypi version"></a>
+    <a href="[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/kadirnar)"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue.svg" alt="hugging face spaces"></a>
+    <a href="[![Medium](https://img.shields.io/badge/Medium-Blog-red)](https://medium.com/@kadir.nar)"><img src="https://img.shields.io/badge/%20Medium%20-Blog-blue.svg" alt="medium"></a>
+
 </div>
+
 
 
 
