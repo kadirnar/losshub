@@ -9,13 +9,10 @@
 
 </div>
 
-
-
-
 ## Loss Functions for Image Classification
 
 Rmse: It is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed. 
-### $$\text{rmse}(x,y) = \frac{1}{n} \sum_{i=1}^n (x_i - y_i)^2$$
+### $$\text{rmse}(x,y) = \sqrt{\frac{1}{n}\sum_{i=1}^n (x_i - y_i)^2}$$
 Mse: In statistics, the mean squared error or mean squared deviation of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the actual value. 
 ### $$\text{mse}(x,y) = \frac{1}{n} \sum_{i=1}^n (x_i - y_i)^2$$
 
