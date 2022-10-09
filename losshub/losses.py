@@ -1,3 +1,5 @@
+import numpy as np
+
 def mse(y_true, y_pred):
     """
     Mean Squared Error (MSE) is the mean of the squared errors.
@@ -10,14 +12,7 @@ def mse(y_true, y_pred):
         y_pred : [0.1, 0.3, 0.3, 0.4, 0.2]
         mse : 1.25
     """
-    sums = 0
-    for i in range(0,len(y_true)):
-        squared_difference = (y_true[i] - y_pred[i]) ** 2
-        sums = sums + squared_difference
-    
-    mean_squared_error = sums / len(y_true)
-    return mean_squared_error
-   
+    return np.mean((y_true - y_pred)**2)
 
 def rmse(y_true, y_pred):
     """
@@ -31,10 +26,4 @@ def rmse(y_true, y_pred):
         y_pred : [0.1, 0.3, 0.3, 0.4, 0.2]
         rmse : 0.6
     """
-    sums = 0
-    for i in range(0,len(y_true)):
-        squared_difference = (y_true[i] - y_pred[i]) ** 2
-        sums = sums + squared_difference
-        
-    mean_squared_error = sums / len(y_true)
-    return mean_squared_error ** 0.5
+    return np.sqrt(np.mean((y_true - y_pred)**2))
